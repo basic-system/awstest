@@ -9,9 +9,11 @@ phases:
     commands:
       - echo Entered the install phase...
       - apt-get update -y
+      - pip install --upgrade awscli
   pre_build:
     commands:
       - echo Entered the pre_build phase...
+      - $(aws ecr get-login --no-include-email --region us-east-1)
   build:
     commands:
       - echo Entered the build phase...
@@ -20,3 +22,6 @@ phases:
     commands:
       - echo Entered the post_build phase...
       - echo Build completed on `date`
+artifacts:
+  files:
+    - Dockerrun.aws.json
