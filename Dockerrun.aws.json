@@ -13,21 +13,5 @@
       ],
       "essential": true,
       "memory": 128
-    },
-    {
-      "name": "nginx",
-      "image": "nginx",
-	  "update": "true",
-      "memory": 128,
-      "portMappings": [
-        {
-          "hostPort": 80,
-          "containerPort": 80
-        }
-      ],
-      "links": [
-        "php-app"
-      ]
-    }
-  ]
+    }]
 }
