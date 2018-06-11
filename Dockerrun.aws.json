@@ -1,7 +1,7 @@
 {
   "AWSEBDockerrunVersion": "1",
   "Image": {
-    "Name": "903227236031.dkr.ecr.us-east-1.amazonaws.com/neoncoat:staging",
+    "Name": "903227236031.dkr.ecr.us-east-1.amazonaws.com/neoncoat:latest",
     "Update": "true"
   },
   "Ports": [
