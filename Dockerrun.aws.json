@@ -1,24 +1,33 @@
 {
-  "AWSEBDockerrunVersion": "1",
-  "Image": {
-    "Name": "903227236031.dkr.ecr.us-east-1.amazonaws.com/neoncoat:latest",
-    "Update": "true"
-  },
-  "Ports": [
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
     {
-      "ContainerPort": "9000"
-    }
-  ]
-},
-{
-  "AWSEBDockerrunVersion": "1",
-  "Image": {
-    "Name": "nginx",
-    "Update": "true"
-  },
-  "Ports": [
+      "name": "php-app",
+	  "image": "903227236031.dkr.ecr.us-east-1.amazonaws.com/neoncoat:latest",
+	  "update": "true",
+      "environment": [
+        {
+          "name": "Container",
+          "value": "PHP"
+        }
+      ],
+      "essential": true,
+      "memory": 128
+    },
     {
-      "ContainerPort": "80"
+      "name": "nginx",
+      "image": "nginx",
+	  "update": "true",
+      "memory": 128,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        }
+      ],
+      "links": [
+        "php-app"
+      ]
     }
   ]
 }
