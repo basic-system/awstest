@@ -4,6 +4,7 @@
     {
       "name": "php-app",
 	  "image": "903227236031.dkr.ecr.us-east-1.amazonaws.com/neoncoat:latest",
+	  "update": "true",
       "environment": [
         {
           "name": "Container",
@@ -16,6 +17,7 @@
     {
       "name": "nginx-proxy",
       "image": "nginx",
+	  "update": "true",
       "essential": true,
       "memory": 128,
       "portMappings": [
