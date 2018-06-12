@@ -3,7 +3,7 @@
   "containerDefinitions": [
     {
       "name": "php-app",
-	  "image": "903227236031.dkr.ecr.us-east-1.amazonaws.com/neoncoat:latest",
+	  "image": "bitnami/php-fpm",
       "essential": true,
       "memory": 128,
 	  "command": [
