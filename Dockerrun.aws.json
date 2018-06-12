@@ -3,14 +3,7 @@
   "containerDefinitions": [
     {
       "name": "php-app",
-	  "image": "php:fpm",
-	  "update": "true",
-      "environment": [
-        {
-          "name": "Container",
-          "value": "PHP"
-        }
-      ],
+	  "image": "903227236031.dkr.ecr.us-east-1.amazonaws.com/neoncoat:latest",
       "essential": true,
       "memory": 128
     }]
